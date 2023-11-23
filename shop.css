@@ -224,6 +224,7 @@ nav{
    width: 458px;
    height: 458px;
    margin: 10px;
+   
 }
 .item:hover{
     box-shadow: 2px 2px 2px white;
@@ -231,26 +232,36 @@ nav{
 .image img{
   width: 100%;
   border: 20px;
+  border-radius: 5%;
 }
 
-.button{
+.bttn{
    
-  text-align: center;
-  background-color: #0f0f0f;
-  border: 1px solid rgb(83, 2, 2);
-  padding: 20px;
-  
-  top: 60%;
-  bottom: 40%;
-
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
 }
+
+.bttn button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
 .name{
   text-align: center;
   font-family: 'IBM Plex SemiBold Italic';
   font-size: xx-large;
   position: absolute;
-  top: 70%;
-  bottom: 30%;
+  bottom: 10%;
   transform: translate(-70% -30%);
-   
+   margin-left: 80px;
 }
