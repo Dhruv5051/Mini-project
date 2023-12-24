@@ -13,6 +13,7 @@ body{
     color: #fff;
 }
 
+
 header{
     position: fixed;
     width: 100%;
@@ -25,16 +26,24 @@ header{
     padding: 20px 10%;
 }
 
-.container{
-    
+/* .container{
+    width: 100%;
+    height: 60px;
     padding: 10px 10%;
-}
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+} */
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    width: 100%;
     }
     .logo{
         width: 140px;
@@ -42,15 +51,13 @@ nav{
         
     }
     
-    .logo span{
-    color: #ff004f;
-    }
-    
+  
     nav ul li{
         display: inline-block;
         list-style: none;
         margin: 10px 20px;
     }
+   
     
     nav ul li a{
         color: #fff;
@@ -90,11 +97,12 @@ nav{
     
     /* ------container2--------- */
     .container2{
-        padding: 30px 10%;
+       
         border: #ff004f;
-        /* width: max-content;  */
+       
         height: fit-content;
         background-color: white;
+        overflow: hidden;
     }
 
     .slider{
@@ -166,10 +174,18 @@ nav{
             height: 400px;
         }
     }
+
 /* Text Moving */
-    .main-text{
-        overflow: hidden;
-        white-space: nowrap;
+.moving-text{
+    
+    white-space: nowrap;
+    overflow-x: hidden;
+    position: relative;
+    
+}
+ .main-text{
+       
+        display: inline-block;
         padding: 30px 0;
         border: #ff004f;
         height: fit-content;
@@ -177,7 +193,7 @@ nav{
     }
     @keyframes roll {
         from{
-            transform: translateX(0);
+            transform: translateX(0%);
             
         }
         to{
@@ -198,9 +214,14 @@ nav{
     /* Section */
 
 .section{
-   
-    border: #ff004f;
+
     height: fit-content;
+    background-color: black;
+    padding-bottom: 50px;
+   
+ 
+}
+section{
     background-color: black;
 }
 .heading{
@@ -221,13 +242,16 @@ nav{
   border-radius: 10px;
   display: inline-block;
    position: relative;
-   width: 458px;
-   height: 458px;
+   width: 	 373px;
+   height: 373px;
    margin: 10px;
+   transition: 0.7s;
    
 }
-.item:hover{
-    box-shadow: 2px 2px 2px white;
+.item1:hover{
+    transform: scale(1.05);
+    z-index: 2;
+
 }
 .image img{
   width: 100%;
@@ -236,11 +260,10 @@ nav{
 }
 
 .bttn{
-   
+   visibility: hidden;
     position: absolute;
     bottom: 20%;
     left: 40%;
-    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -254,7 +277,10 @@ nav{
     border: none;
     font-family: monospace;
     font-weight: bold;
+    
+   
 }
+
 
 .name{
   text-align: center;
@@ -264,4 +290,83 @@ nav{
   bottom: 10%;
   transform: translate(-70% -30%);
    margin-left: 80px;
+}
+
+
+
+
+/* ------Horizontal------ */
+.heading2{
+    
+    margin-left: 48px;
+      font-family: 'IBM Plex SemiBold Italic';
+      font-size: 3rem;
+      padding-bottom: 20px;
+  
+  }
+.product-list{
+    margin-top: 30px;
+    margin-left: 46px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+    display: flex;
+    overflow-x: auto; 
+   
+    padding-block: 30px;
+  
+}
+  .product-card{
+    height: 410px;
+    width: 290px;
+    margin: 10px;
+    display: inline-block;
+    }
+  .card img{
+    border-radius: 15px;
+  }
+
+  .card a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .card a span{
+    color: rgb(255, 196, 0);
+}
+.rating,.price{
+    padding-left: 10px;
+}
+.price{
+    color:rgb(255, 0, 0);
+    font-weight: 700;
+
+}
+.discription{
+    color: white;
+    font-weight: 700;
+    padding-left:10px ;
+    height: auto;
+    
+}
+
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb{
+   background-color: rgb(255, 255, 255);
+   border-radius: 45px;
+   background-clip: content-box;
+   border: 2px solid transparent;
+}
+::-webkit-scrollbar:horizontal{
+    height: 8px;
 }
